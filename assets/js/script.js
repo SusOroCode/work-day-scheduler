@@ -9,10 +9,10 @@
 $(document).ready(function () {
 
   $('.saveBtn').on('click', function () {
-    var text = $(this).siblings(".description").val();
-    var time = $(this).parent().attr("id");
+    var textEl = $(this).siblings(".description").val();
+    var timeEl = $(this).parent().attr("id");
 
-    localStorage.setItem(time, text);
+    localStorage.setItem(timeEl, textEl);
 
     console.log('did it save?'); // Yes it saved!
   })
@@ -40,9 +40,27 @@ $(document).ready(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+
+//var currentTimeEl = 12;
   
 
+var timeBlockEl = $('.time-block');
+console.log(timeBlockEl);
 
+ timeBlockEl.each(function () {
+
+  console.log(this.id);
+  var timeBlockId = parseInt(this.id.split('-')[1]);
+  console.log(timeBlockId);
+
+  if (timeBlockId < currentDayEl) {
+    $(this).addClass('past');
+  } else if (timeBlockId === currentDayEl) {
+    $(this).addClass('present');
+  } else {
+    $(this).addClass('futute');
+  }
+ });
 
 
   // TODO: Add code to display the current date in the header of the page.
