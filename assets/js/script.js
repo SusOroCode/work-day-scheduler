@@ -42,7 +42,7 @@ $(document).ready(function () {
         $(this).removeClass('present');
         $(this).removeClass('future');
         $(this).addClass('past');
-      } else if (currentHourEl === hourEl) {
+      } else if (currentHourEl == hourEl) {
         $(this).removeClass('past');
         $(this).removeClass('future');
         $(this).addClass('present');
