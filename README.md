@@ -43,4 +43,4 @@ Please reference the gif and photos for the Work Day Scheduler Project.
 
 Please refer to deployed application directly:
 
-[Code Quiz](https://susorocode.github.io/work-day-scheduler/)
+[Work Day Scheduler](https://susorocode.github.io/work-day-scheduler/)
